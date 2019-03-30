@@ -16,14 +16,6 @@ echo 'TESTME_KEY' $TESTME_KEY
 echo 'creating file conf/dev/newproduction.pem'
 mkdir conf/dev && touch conf/dev/newproduction.pem
 
-echo
-echo
-echo
-echo 'decrypting newproduction pem'
-cat build/newproduction.pem.enc
-echo
-echo
-
 source build/decrypt_newproduction_pem.sh
 
 mkdir ~/.ssh && touch ~/.ssh/known_hosts
