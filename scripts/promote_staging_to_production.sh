@@ -35,5 +35,6 @@ aws s3 cp s3://lergo-backups/artifacts/latest/build.id s3://lergo-backups/builds
 # aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ri-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ri-0.0.0.tgz --dryrun
 # aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ui-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ui-0.0.0.tgz --dryrun
 
+rm -rf latest-build-number.txt
 
 echo promote completed succesfully

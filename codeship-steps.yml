@@ -1,6 +1,6 @@
 - name: promote-staging-latest-to-production
   service: production-promote-upgrade
   command: bash -c /app/lergo/production-promote-upgrade/scripts/promote_staging_to_production.sh
-#- name: upgrade_production
-#  service: production-promote-upgrade
-#  command: bash -c /app/lergo/production-promote-upgrade/scripts/upgrade_production.sh
+- name: upgrade_production
+  service: production-promote-upgrade
+  command: bash -c /app/lergo/production-promote-upgrade/scripts/upgrade_production.sh
