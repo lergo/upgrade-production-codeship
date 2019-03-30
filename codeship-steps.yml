@@ -1,9 +1,6 @@
-- name: install_build_upload
+- name: promote-staging-latest-to-production
   service: production-promote-upgrade
-  command: bash -c /app/lergo/production-promote-upgrade/scripts/install_build_upload.sh
-- name: test-ri 
-  service: production-promote-upgrade
-  command: bash -c /app/lergo/production-promote-upgrade/scripts/test_ri.sh
-- name: upgrade_staging
-  service: production-promote-upgrade
-  command: bash -c /app/lergo/production-promote-upgrade/scripts/upgrade_staging.sh
+  command: bash -c /app/lergo/production-promote-upgrade/scripts/promote_staging_to_production.sh
+#- name: upgrade_production
+#  service: production-promote-upgrade
+#  command: bash -c /app/lergo/production-promote-upgrade/scripts/upgrade_production.sh

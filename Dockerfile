@@ -1,4 +1,4 @@
-FROM lergo/production-promote-upgrade-setup:latest
+FROM lergo/lergo-build-setup:latest
 
 ARG workdir=/app/lergo
 WORKDIR ${workdir}
@@ -22,8 +22,8 @@ RUN /bin/bash -c ${workdir}/production-promote-upgrade/scripts/install_ri.sh
 # COPY scripts/build_system_tests.sh ${workdir}/production-promote-upgrade/scripts/build_system_tests.sh
 # RUN /bin/bash -c ${workdir}/production-promote-upgrade/scripts/build_system_tests.sh
 
-COPY scripts/install_tasks.sh ${workdir}/production-promote-upgrade/scripts/install_tasks.sh
-RUN /bin/bash -c ${workdir}/production-promote-upgrade/scripts/install_tasks.sh
+# COPY scripts/install_tasks.sh ${workdir}/production-promote-upgrade/scripts/install_tasks.sh
+# RUN /bin/bash -c ${workdir}/production-promote-upgrade/scripts/install_tasks.sh
 
 
 # COPY scripts/upload_artifacts.sh ${workdir}/production-promote-upgrade/scripts/upload_artifacts.sh

@@ -1,2 +1,2 @@
 # production-codeship-promote-and-upgrade
-committing code with specific build number promotes that build number to latest and upgrades staging
+promotes latest from staging to production (latest and to build number) and runs upgrade in production.
