@@ -13,7 +13,7 @@ npm install -g grunt-cli
 grunt
 
 echo get the next build number from build-tracker
-aws s3 cp s3://lergo-build-number-tracker/build-tracker.txt build-tracker.txt
+aws s3 cp s3://production-promote-upgrade-number-tracker/build-tracker.txt build-tracker.txt
 CURRENT_BUILD_ID=`cat build-tracker.txt`
 
 echo checking current build number,  $CURRENT_BUILD_ID  is an integer
@@ -27,7 +27,7 @@ export BUILD_NUMBER=$((CURRENT_BUILD_ID + 1))
 echo $BUILD_NUMBER > build-tracker.txt
 
 echo upload indexed build number to s3
-aws s3 cp build-tracker.txt s3://lergo-build-number-tracker/build-tracker.txt 
+aws s3 cp build-tracker.txt s3://production-promote-upgrade-number-tracker/build-tracker.txt 
 
 echo previous build number was $CURRENT_BUILD_ID and current build id is now $BUILD_NUMBER
 

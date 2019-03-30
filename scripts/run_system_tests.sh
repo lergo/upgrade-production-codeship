@@ -26,7 +26,7 @@ service mongodb status
 
 mongo lergo-test < build/vagrant/synced_folder/test_data.js > $PROVISION_LOG_FILE
 
-\cp -f  ../lergo-build/scripts/lergo.nginx /etc/nginx/sites-enabled/lergo.conf
+\cp -f  ../production-promote-upgrade/scripts/lergo.nginx /etc/nginx/sites-enabled/lergo.conf
 service nginx restart
 
 mkdir -p $DEPLOY_BASE/lergo-ri
