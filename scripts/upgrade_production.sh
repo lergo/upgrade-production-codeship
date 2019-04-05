@@ -27,7 +27,7 @@ chmod 600 $KEY_FILE
 ssh -i $KEY_FILE ubuntu@52.16.85.48 << EOF
 echo 'inside production'
 ls
-# sudo service lergo upgrade && sudo service lergo stop && sudo service lergo start
-# sudo service lergo status
+sudo service lergo upgrade && sudo service lergo stop && sudo service lergo start
+sudo service lergo status
 exit
 EOF

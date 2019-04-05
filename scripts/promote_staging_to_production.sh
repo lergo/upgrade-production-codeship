@@ -24,16 +24,16 @@ echo install aws-cli
 npm install aws-cli
 
 echo copying artifacts/latest to builds/production/latest
-aws s3 cp s3://lergo-backups/artifacts/latest/build.id s3://lergo-backups/builds/production/latest/build.id --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/install.sh s3://lergo-backups/builds/production/latest/install.sh --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ri-0.0.0.tgz s3://lergo-backups/builds/production/latest/lergo-ri-0.0.0.tgz --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ui-0.0.0.tgz s3://lergo-backups/builds/production/latest/lergo-ui-0.0.0.tgz --dryrun
+aws s3 cp s3://lergo-backups/artifacts/latest/build.id s3://lergo-backups/builds/production/latest/build.id --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/install.sh s3://lergo-backups/builds/production/latest/install.sh --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ri-0.0.0.tgz s3://lergo-backups/builds/production/latest/lergo-ri-0.0.0.tgz --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ui-0.0.0.tgz s3://lergo-backups/builds/production/latest/lergo-ui-0.0.0.tgz --acl public-read-write
 
 echo copying artifacts/latest to builds/production/ ${build_id} 
-aws s3 cp s3://lergo-backups/artifacts/latest/build.id s3://lergo-backups/builds/production/${build_id}/build.id --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/install.sh s3://lergo-backups/builds/production/${build_id}/install.sh --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ri-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ri-0.0.0.tgz --dryrun
-# aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ui-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ui-0.0.0.tgz --dryrun
+aws s3 cp s3://lergo-backups/artifacts/latest/build.id s3://lergo-backups/builds/production/${build_id}/build.id --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/install.sh s3://lergo-backups/builds/production/${build_id}/install.sh --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ri-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ri-0.0.0.tgz --acl public-read-write
+aws s3 cp s3://lergo-backups/artifacts/latest/lergo-ui-0.0.0.tgz s3://lergo-backups/builds/production/${build_id}/lergo-ui-0.0.0.tgz --acl public-read-write
 
 rm -rf latest-build-number.txt
 
