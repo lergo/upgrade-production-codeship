@@ -17,7 +17,7 @@ var transporter = nodemailer.createTransport(ses({
 
 transporter.sendMail({
     from: 'noreply@lergo.org',
-    to: 'jlevym@gmail.com',
+    to: 'jlevym@gmail.com, levy.nava@gmail.com, nava.levy@lergo.org ',
     subject: `lergo has been upgraded`,
     text: `lergo has been upgraded with the latest commit and is ready for review.
     Build Number:${BUILD_NUMBER}
