@@ -1,0 +1,1 @@
+LERGO-686 (cont) bug(fix) implementing case for user without roles
