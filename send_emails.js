@@ -21,6 +21,5 @@ transporter.sendMail({
     subject: `lergo has been upgraded`,
     text: `lergo has been upgraded with the latest commit and is ready for review.
     Build Number:${BUILD_NUMBER}
-    BuildID: ${CI_TIMESTAMP}
-    Commit Message: ${CI_COMMIT_MESSAGE}`
+    BuildID: ${CI_TIMESTAMP}`
 });
