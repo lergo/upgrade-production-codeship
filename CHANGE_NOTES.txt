@@ -1,1 +1,2 @@
+Previous project on codeship gave errors after 5 secconds so pushing a new build to a new project - July 2021
 LERGO-686 (cont) bug(fix) implementing case for user without roles
